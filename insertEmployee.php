@@ -15,22 +15,6 @@
         <input type="submit" value="submit" name="btnSubmit">
     </form>
     <?php
-        if(isset($_POST['btnSubmit'])){
-            $id = $_POST['id'];
-            $empName = $_POST['name'];
-            $salary = $_POST['salary'];
-            $dept = $_POST['department'];
-
-            $mycon = mysqli_connect("localhost","root","","basic");
-            echo"connected to database";
-
-            $sql = "insert into employee values(?,?,?,?)";
-            $prepar = $mycon->prepare($sql);
-            $prepar->bind_param("isis",$id,$empName,$salary,$dept);
-            $prepar->execute();
-            echo"<br>data inserted successfully";
-        }
-    ?>
-    </center>
+   </center>
 </body>
 </html>
